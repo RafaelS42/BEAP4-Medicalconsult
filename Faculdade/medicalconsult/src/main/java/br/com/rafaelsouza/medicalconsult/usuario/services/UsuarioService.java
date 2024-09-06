@@ -26,4 +26,15 @@ public class UsuarioService {
         return usuarioRepository.findById(id).orElseThrow(
                 () -> new ObjectNotFoundException("Usuario não encontrado", id));
     }
+
+    public void excluir(Long id){
+        usuarioRepository.deleteById(id);
+    }
+
+    public Usuario atualizar(Usuario usuario){
+        if(usuario.getIdUsuario()==null){
+            throw new RuntimeException("Usuario sem id");
+        }
+        return usuarioRepository.save(usuario);
+    }
 }

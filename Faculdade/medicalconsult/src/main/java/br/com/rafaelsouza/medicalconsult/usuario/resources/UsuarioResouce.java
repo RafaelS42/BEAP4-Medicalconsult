@@ -35,4 +35,14 @@ public class UsuarioResouce {
         Usuario usuario = usuarioService.buscarusuario(id);
         return ResponseEntity.ok().body(usuario);
     }
+
+    @DeleteMapping(value = "/{id}")
+    public void excluirPorId(@PathVariable Long id){
+        usuarioService.excluir(id);
+    }
+
+    @PutMapping
+    public Usuario atualizar(@RequestBody Usuario usuario){
+        return usuarioService.atualizar(usuario);
+    }
 }
