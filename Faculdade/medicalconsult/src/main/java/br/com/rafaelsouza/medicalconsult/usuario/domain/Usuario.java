@@ -27,7 +27,8 @@ public class Usuario {
     private String telefone;
     @Column(name = "DATA_NASCIMENTO")
     private Date dataNascimento;
-    //private Permissao permissao;
+    @Column(name = "PERMISSAO")
+    private Permissao permissao;
 
     public Usuario(Long idUsuario, String nomeUsuario, String email, String cpf, String telefone, Date dataNascimento) {
         this.idUsuario = idUsuario;

@@ -32,10 +32,9 @@ public class UsuarioService {
     }
 
     public Usuario atualizar(Usuario usuario){
-        if(usuario.getIdUsuario()==null){
-            throw new RuntimeException("Usuario sem id");
-        }
+//        if(usuario.getIdUsuario()==null){
+//            throw new RuntimeException("Usuario sem id");
+//        }
         return usuarioRepository.save(usuario);
     }
-    //teste
 }
