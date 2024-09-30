@@ -30,7 +30,7 @@ public class UsuarioResouce {
         return ResponseEntity.ok().body(usuarios);
     }
 
-    @RequestMapping(value = "/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<Usuario> buscarUsuario(Long id){
         Usuario usuario = usuarioService.buscarusuario(id);
         return ResponseEntity.ok().body(usuario);

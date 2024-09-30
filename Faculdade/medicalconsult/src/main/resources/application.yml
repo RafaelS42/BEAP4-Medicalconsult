@@ -5,3 +5,7 @@ spring:
 java:
   runtime:
     version: '17'
+
+springdoc:
+  api-docs:
+    path: /api-docs
