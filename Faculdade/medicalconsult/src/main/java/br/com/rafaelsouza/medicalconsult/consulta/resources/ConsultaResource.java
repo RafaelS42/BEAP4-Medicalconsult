@@ -21,9 +21,7 @@ public class ConsultaResource {
     @PostMapping
     public ResponseEntity<Consulta> cadastrarConsulta(@RequestBody Consulta consulta){
         Consulta novaConsulta = consultaService.cadastrarConsulta(consulta);
-        URI uri = ServletUriComponentsBuilder
-                .fromCurrentRequestUri().path("/{id}")
-                .buildAndExpand(novaConsulta.getIdConsulta()).toUri();
+        URI uri = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/{id}").buildAndExpand(novaConsulta.getIdConsulta()).toUri();
         return ResponseEntity.created(uri).body(novaConsulta);
     }
 
