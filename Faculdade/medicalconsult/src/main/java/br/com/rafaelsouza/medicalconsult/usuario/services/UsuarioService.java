@@ -22,12 +22,12 @@ public class UsuarioService {
         return usuarioRepository.findAll();
     }
 
-    public Usuario buscarUsuario(Long id){
+    public Usuario buscarusuario(Long id){
         return usuarioRepository.findById(id).orElseThrow(
                 () -> new ObjectNotFoundException("Usuario não encontrado", id));
     }
 
-    public void excluirUsuario(Long id){
+    public void excluir(Long id){
         usuarioRepository.deleteById(id);
     }
 
