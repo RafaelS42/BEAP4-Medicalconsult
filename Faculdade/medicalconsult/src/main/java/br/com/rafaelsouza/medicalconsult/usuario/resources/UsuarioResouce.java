@@ -32,13 +32,13 @@ public class UsuarioResouce {
 
     @GetMapping("/{id}")
     public ResponseEntity<Usuario> buscarUsuario(Long id){
-        Usuario usuario = usuarioService.buscarusuario(id);
+        Usuario usuario = usuarioService.buscarUsuario(id);
         return ResponseEntity.ok().body(usuario);
     }
 
     @DeleteMapping(value = "/{id}")
     public void excluirPorId(@PathVariable Long id){
-        usuarioService.excluir(id);
+        usuarioService.excluirUsuario(id);
     }
 
     @PutMapping
