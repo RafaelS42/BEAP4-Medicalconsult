@@ -1,6 +1,7 @@
 package br.com.rafaelsouza.medicalconsult.usuario.domain;
 
 public enum Permissao {
+    PACIENTE("PACIENTE"),
     ADMIN("ADMIN"),
     SECRETARIO("SECRETARIO");
 
